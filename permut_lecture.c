@@ -14,7 +14,7 @@ This function takes three parameters:
 String, starting index, and ending index*/
 void permute(char *s, int l, int r)
 {
-    printf("permute has been called\n");
+    // printf("permute has been called\n");
     int i;
     if (l == r)
         printf("i = r -> %s\n", s);
@@ -22,12 +22,12 @@ void permute(char *s, int l, int r)
     {
         for (i = l; i <= r; i++)
         {
-            printf("l=%d; r=%d\n", l, r);
+            // printf("l=%d; r=%d\n", l, r);
             swap(&s[l], &s[i]);
-            printf("first swap -> %s\n", s);
+            // printf("first swap -> %s\n", s);
             permute(s, l+1, r);
             swap(&s[l], &s[i]); //swap back
-            printf("swap back -> %s\n", s);
+            // printf("swap back -> %s\n", s);
             
         }
     }
